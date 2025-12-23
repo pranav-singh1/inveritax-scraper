@@ -21,7 +21,7 @@ class PlaywrightEngine(ScrapeEngine):
     async def start(self) -> None:
         def _start():
             self._pw = sync_playwright().start()
-            self._browser = self._pw.chromium.launch(headless=self.headless, slow_mo=self.slow_mo_ms)
+            self._browser = self._pw.firefox.launch(headless=self.headless, slow_mo=self.slow_mo_ms)
         await asyncio.to_thread(_start)
 
     async def stop(self) -> None:
