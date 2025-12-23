@@ -17,4 +17,4 @@ selectors:
     delinquent_amount:
       selector: "[id*='Delinquent' i], td"
 field_mapping: {}
-notes: LandNav - Start at /Home, accept terms, navigate to search. Use button[type=submit] for search
+notes: LandNav platform - guest access via /Home, MinUserDefinedId for parcel search

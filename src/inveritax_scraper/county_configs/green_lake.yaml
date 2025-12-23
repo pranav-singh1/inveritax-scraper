@@ -17,4 +17,4 @@ selectors:
     delinquent_amount:
       selector: "[ng-bind*='Delinquent' i]"
 field_mapping: {}
-notes: Green Lake Ascent - Use 2nd visible input (index 1) for Parcel ID, 12 digit format
+notes: Ascent platform - Parcel ID is 2nd visible input, 12-digit format required

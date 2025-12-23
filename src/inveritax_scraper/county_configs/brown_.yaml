@@ -26,4 +26,4 @@ selectors:
     delinquent_utility:
       selector: "#lblDelinquentUtilityDue"
 field_mapping: {}
-notes: Brown County GCS - click Current tab then Taxes link for tax info
+notes: GCS platform - navigate Current tab -> Taxes link for detail data
