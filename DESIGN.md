@@ -1,4 +1,4 @@
-# Design Notes (Interview Talking Points)
+# Architecture Design Notes
 
 ## Core principle
 Separate the reusable engine from per-county variability:

@@ -18,12 +18,12 @@ python -m playwright install chromium
 
 ### 2) Run (live mode, browser automation)
 ```bash
-python -m inveritax_scraper run --input "Webscraping Test FIle.xlsx" --output output.json --headless --max-concurrency 5
+python -m inveritax_scraper --input "Webscraping Test FIle.xlsx" --output output.json --headless --max-concurrency 5
 ```
 
 ### 3) Run (mock mode, no network)
 ```bash
-python -m inveritax_scraper run --mode mock --fixtures tests/fixtures/fixtures.json --input "Webscraping Test FIle.xlsx"
+python -m inveritax_scraper --mode mock --fixtures tests/fixtures/fixtures.json --input "Webscraping Test FIle.xlsx" --output output.json
 ```
 
 ## Where to edit county behavior
@@ -47,7 +47,7 @@ The normalized record matches the minimum data requested:
 - installment breakdown (first/second half)
 - due dates (if present on the site)
 
-Implementation note: normalization is intentionally heuristic in `normalizer.py` because each county labels fields differently. In production you would tighten it by adding per-county `field_mapping` rules.
+Implementation note: normalization is intentionally heuristic in `normalizer.py` because each county labels fields differently. Production deployments should add per-county `field_mapping` rules for stricter validation.
 
 ## Why this is structured this way
 
@@ -57,10 +57,10 @@ Implementation note: normalization is intentionally heuristic in `normalizer.py`
   - `PlaywrightEngine` for real sites
   - `MockEngine` for deterministic tests / no-network environments
 
-## Next steps you can mention in the interview
+## Future Improvements
 
-- Add a lightweight per-county “mapping DSL” (regex/label matching) to reduce selector fragility.
-- Add retries + screenshot capture on failures for debugging.
-- Add result caching keyed by (county, parcel, run_date) to avoid re-scraping.
-- Add monitoring: success rate per county, drift detection, alerting.
+- Lightweight per-county mapping DSL for reducing selector fragility
+- Screenshot capture on failures for debugging
+- Result caching keyed by (county, parcel, run_date)
+- Monitoring dashboard: success rates, drift detection, alerting
 
