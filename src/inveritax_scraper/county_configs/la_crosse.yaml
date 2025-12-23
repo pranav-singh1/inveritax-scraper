@@ -1,0 +1,20 @@
+county: La Crosse
+platform: LandNav
+base_url: https://pp-lacrosse-co-wi-fb.app.landnav.com/Home
+supported_search_modes:
+- parcel_number
+selectors:
+  guest_accept_selector: "button:has-text('Accept and Sign in')"
+  search_input_selector: "input[name='MinUserDefinedId']"
+  search_button_selector: "button[type='submit']:has-text('Search')"
+  wait_for_selector: "table tr"
+  details_link_selector: "table tr td a"
+  extract:
+    parcel_number:
+      selector: "td, span, div"
+    current_year_total_tax:
+      selector: "[id*='Tax' i], td"
+    delinquent_amount:
+      selector: "[id*='Delinquent' i], td"
+field_mapping: {}
+notes: LandNav - Start at /Home, accept terms, navigate to search. Use button[type=submit] for search

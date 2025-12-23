@@ -1,0 +1,9 @@
+[project]
+name = "inveritax-scraper"
+version = "0.1.0"
+description = "Candidate project: scalable multi-county scraper framework"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+county: Green Lake
+platform: Ascent
+base_url: https://greenlake.transcendenttech.com/LandRecords/PropertyListing/RealEstateTaxParcel#/Search
+supported_search_modes:
+- parcel_number
+selectors:
+  popup_dismiss_selector: "a:has-text('Previous Page')"
+  search_input_selector: "input[type='text']:visible:nth(1)"
+  search_button_selector: "#btnFindNow"
+  wait_for_selector: "table, tbody tr"
+  details_link_selector: "td a:first-child, a.text-danger"
+  extract:
+    parcel_number:
+      selector: "td:nth-child(1)"
+    current_year_total_tax:
+      selector: "[ng-bind*='Tax' i]"
+    delinquent_amount:
+      selector: "[ng-bind*='Delinquent' i]"
+field_mapping: {}
+notes: Green Lake Ascent - Use 2nd visible input (index 1) for Parcel ID, 12 digit format

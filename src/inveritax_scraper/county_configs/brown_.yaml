@@ -1,0 +1,29 @@
+county: Brown
+platform: GCS
+base_url: https://prod-landrecords.browncountywi.gov/Search.aspx
+supported_search_modes:
+- parcel_number
+selectors:
+  search_input_selector: "#mtxtParcelNumber"
+  search_button_selector: "#ButtonParcelSearch"
+  wait_for_selector: "#ctl00_cphMainApp_GridViewParcelResults"
+  details_link_selector: "a[id*='LinkButtonParcelNumber']"
+  detail_tab_selector: "a:has-text('Current')"
+  taxes_link_selector: "#lnkTaxes"
+  extract:
+    parcel_number:
+      selector: "#LabelTitleParcelNum"
+    current_year_total_tax:
+      selector: "#lblGrossTax"
+    total_tax_due:
+      selector: "#lblTotalDue"
+    net_tax_due:
+      selector: "#lblNetTaxDue"
+    interest_due:
+      selector: "#lblInterestDue"
+    penalty_due:
+      selector: "#lblPenaltyDue"
+    delinquent_utility:
+      selector: "#lblDelinquentUtilityDue"
+field_mapping: {}
+notes: Brown County GCS - click Current tab then Taxes link for tax info

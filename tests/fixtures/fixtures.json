@@ -1,0 +1,36 @@
+{
+  "brown::1-1360-1": {
+    "parcel_number": "1-1360-1",
+    "current_year_total_tax": "3207.13",
+    "total_tax_due": "2876.07",
+    "net_tax_due": "2876.07",
+    "interest_due": "0.00",
+    "penalty_due": "0.00",
+    "delinquent_utility": "0.00"
+  },
+  "brown::1-2047": {
+    "parcel_number": "1-2047",
+    "current_year_total_tax": "2450.89",
+    "total_tax_due": "2450.89",
+    "net_tax_due": "2450.89",
+    "interest_due": "0.00",
+    "penalty_due": "0.00",
+    "delinquent_utility": "0.00"
+  },
+  "green lake::6000350000": {
+    "parcel_number": "6000350000",
+    "current_year_total_tax": "1850.42",
+    "total_tax_due": "1850.42",
+    "delinquent_amount": "0.00",
+    "first_installment_amount": "925.21",
+    "second_installment_amount": "925.21"
+  },
+  "la crosse::01-00023-010": {
+    "parcel_number": "01-00023-010",
+    "current_year_total_tax": "3156.78",
+    "total_tax_due": "3156.78",
+    "delinquent_amount": "0.00",
+    "first_installment_amount": "1578.39",
+    "second_installment_amount": "1578.39"
+  }
+}
